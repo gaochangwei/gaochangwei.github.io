@@ -78,7 +78,7 @@ const mainStage = new Stage("main-canvas");
 const stages = [trailsStage, mainStage];
 
 //随机文字烟花内容
-const randomWords = ["生日快乐", "天天开心", '生日快乐'];
+const randomWords = ["生日快乐", "天天开心", '生日快乐', '未来可柒'];
 const wordDotsMap = {};
 randomWords.forEach((word) => {
 	wordDotsMap[word] = MyMath.literalLattice(word, 3, "Gabriola,华文琥珀", "90px");
@@ -2567,10 +2567,12 @@ function setLoadingStatus(status) {
 
 // CodePen profile header doesn't need audio, just initialize.
 if (IS_HEADER) {
-	init();
+	setTimeout(() => {
+		init();
+	}, 7000);
 } else {
 	// Allow status to render, then preload assets and start app.
-	setLoadingStatus("正在点燃导火线");
+	setLoadingStatus("Happy Birthday！");
 	setTimeout(() => {
 		// 只加载 soundManager
 		var promises = [soundManager.preload()];
@@ -2581,5 +2583,5 @@ if (IS_HEADER) {
 			init();
 			return Promise.reject(reason);
 		});
-	}, 0);
+	}, 7000);
 }
