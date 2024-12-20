@@ -77,11 +77,14 @@ body {
 }
 .loading-init__header {
 	font-size: 2.2em;
+	color: #C7ECFF;
 }
 .loading-init__status {
 	margin-top: 1em;
 	font-size: 0.8em;
+	font-size: 2.7em;
 	opacity: 0.75;
+	color: #F1189D;
 }
 
 .stage-container {
